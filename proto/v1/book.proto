@@ -1,0 +1,15 @@
+syntax = "proto3";
+package proto.v1;
+
+// [START go_declaration]
+option go_package = "/class";
+
+message Book {
+  int32 id = 1;
+  string title = 2;
+  string description = 3;
+}
+
+message Library {
+  Book book = 1;
+}
