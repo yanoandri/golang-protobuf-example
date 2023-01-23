@@ -1,0 +1,15 @@
+syntax = "proto3";
+package proto.v1;
+
+import "proto/v1/book.proto";
+
+// [START go_declaration]
+option go_package = "/class";
+
+message Library {
+  int32 id = 1;
+  repeated Book books = 2;
+  string name = 3;
+  string address = 4;
+  repeated Person persons = 5;
+}

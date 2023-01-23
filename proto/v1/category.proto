@@ -1,0 +1,10 @@
+syntax = "proto3";
+package proto.v1;
+
+// [START go_declaration]
+option go_package = "/class";
+
+message Category {
+  int32 id = 1;
+  string name = 2;
+}

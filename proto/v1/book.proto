@@ -1,6 +1,8 @@
 syntax = "proto3";
 package proto.v1;
 
+import "google/protobuf/timestamp.proto";
+
 // [START go_declaration]
 option go_package = "/class";
 
@@ -8,8 +10,14 @@ message Book {
   int32 id = 1;
   string title = 2;
   string description = 3;
+  bool is_borrow = 4;
+  google.protobuf.Timestamp borrow_date = 5;
 }
 
-message Library {
-  Book book = 1;
+message Person {
+  int32 id = 1;
+  string name = 2;
+  int32 age = 3;
+  google.protobuf.Timestamp attend_date = 4;
+  Book book = 5;
 }
